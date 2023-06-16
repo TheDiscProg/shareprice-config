@@ -18,7 +18,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           distribution: temurin
-          java-verion: ${{ matrix.java }}
+          java-version: ${{ matrix.java }}
       - name: Build and test
         shell: bash
         run: sbt -v +test
