@@ -1,7 +1,11 @@
-name: Config Builder
+name: Publish Config
 on:
-  pull_request:
   push:
+    tags:
+      - v*
+    branches-ignore:
+      - main
+      - *
 env:
   GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
 jobs:
