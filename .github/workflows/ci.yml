@@ -2,6 +2,8 @@ name: Config Builder
 on:
   pull_request:
   push:
+env:
+  GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
 jobs:
   test:
     strategy:
