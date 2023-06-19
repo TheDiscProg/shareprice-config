@@ -1,11 +1,8 @@
 name: Publish Config
 on:
   push:
-    tags:
-      - v*
-    branches-ignore:
+    branches:
       - main
-      - *
 env:
   GITHUB_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
 jobs:
@@ -27,4 +24,4 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Build and test
         shell: bash
-        run: sbt -v +test publish
+        run: sbt test publish
