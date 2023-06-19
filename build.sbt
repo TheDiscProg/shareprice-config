@@ -17,7 +17,10 @@ lazy val root = (project in file ("."))
     commonSettings,
     name := "shareprice-config",
     Compile / doc/ sources := Seq.empty,
-    scalacOptions ++= Scalac.options,
+    scalacOptions ++= Scalac.options
   )
+
+githubOwner := "TheDiscProg"
+githubRepository := "shareprice-config"
 
 addCommandAlias("clntst", ";clean;scalafmt;test:scalafmt;test;")
