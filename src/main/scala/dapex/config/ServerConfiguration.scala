@@ -8,6 +8,8 @@ case class ServerConfiguration(
     http: HttpConfiguration,
     // All microservices mush have a RMQ publisher or consumer
     rabbitMQ: RabbitMQConfig,
+    // Not all will have the following configuration
+    kafka: Option[KafkaConfig],
     caching: Option[HazelcastConfig],
     db: Option[DatabaseConfig],
     // Secret key for JWT token signing
