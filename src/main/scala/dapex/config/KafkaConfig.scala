@@ -5,7 +5,8 @@ import io.circe.generic.semiauto.deriveDecoder
 
 case class KafkaConfig(
     bootstrapServer: String,
-    port: Int
+    port: Int,
+    group: String
 )
 
 object KafkaConfig {
