@@ -1,10 +1,11 @@
 ThisBuild / organization := "Shareprice"
 
-ThisBuild / version := "0.3.1"
+ThisBuild / version := "0.5.0"
 
 lazy val commonSettings = Seq(
   scalaVersion := "2.13.10",
   libraryDependencies ++= Dependencies.all,
+  resolvers += Resolver.githubPackages("TheDiscProg"),
   addCompilerPlugin(
     ("org.typelevel" %% "kind-projector" % "0.13.2").cross(CrossVersion.full)
   ),

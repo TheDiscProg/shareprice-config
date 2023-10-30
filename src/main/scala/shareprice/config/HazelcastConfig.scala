@@ -1,4 +1,4 @@
-package dapex.config
+package shareprice.config
 
 import io.circe.Decoder
 import io.circe.generic.semiauto.deriveDecoder

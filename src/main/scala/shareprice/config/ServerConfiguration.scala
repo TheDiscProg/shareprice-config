@@ -1,5 +1,7 @@
-package dapex.config
+package shareprice.config
 
+import dapex.kafka.config.KafkaConfig
+import dapex.rabbitmq.config.RabbitMQConfig
 import io.circe.Decoder
 import io.circe.generic.semiauto.deriveDecoder
 
