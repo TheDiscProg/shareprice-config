@@ -42,4 +42,10 @@ object SharepriceQueue {
       SERVICE_COLLECTION_POINT_QUEUE
     )
 
+  def queueWithName(name: String): RabbitQueue =
+    values.find(_.name.value == name) match {
+      case Some(value) => value
+      case None => throw new RuntimeException(s"No queue with name $name defined")
+    }
+
 }
