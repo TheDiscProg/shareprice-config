@@ -5,6 +5,7 @@ object Dependencies {
   lazy val all = Seq(
     "DAPEX" %% "dapex-rabbitmq" % "0.2.0",
     "DAPEX" %% "dapex-kafka" % "0.2.2",
+    "DAPEX" %% "dapex-caching" % "0.1.0",
     "io.circe" %% "circe-core" % "0.14.5",
     "io.circe" %% "circe-generic" % "0.14.5",
     "io.circe" %% "circe-parser" % "0.14.5",

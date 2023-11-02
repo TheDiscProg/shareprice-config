@@ -1,5 +1,6 @@
 package shareprice.config
 
+import dapex.caching.config.HazelcastConfig
 import dapex.kafka.config.KafkaConfig
 import dapex.rabbitmq.config.RabbitMQConfig
 import io.circe.Decoder
