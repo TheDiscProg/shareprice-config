@@ -1,6 +1,6 @@
 package shareprice.kafka
 
-import dapex.kafka.KafkaTopic
+import simex.kafka.KafkaTopic
 
 object SharepriceTopic {
 

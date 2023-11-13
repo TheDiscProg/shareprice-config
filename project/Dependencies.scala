@@ -2,10 +2,12 @@ import sbt._
 
 object Dependencies {
 
+  private lazy val simexVersion = "0.6.0"
+
   lazy val all = Seq(
-    "DAPEX" %% "dapex-rabbitmq" % "0.2.1",
-    "DAPEX" %% "dapex-kafka" % "0.2.3",
-    "DAPEX" %% "dapex-caching" % "0.1.3",
+    "simex" %% "simex-rabbitmq" % simexVersion,
+    "simex" %% "simex-kafka" % simexVersion,
+    "simex" %% "simex-caching" % simexVersion,
     "io.circe" %% "circe-core" % "0.14.5",
     "io.circe" %% "circe-generic" % "0.14.5",
     "io.circe" %% "circe-parser" % "0.14.5",

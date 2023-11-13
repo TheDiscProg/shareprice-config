@@ -1,6 +1,6 @@
 ThisBuild / organization := "Shareprice"
 
-ThisBuild / version := "0.7.0"
+ThisBuild / version := "0.8.0"
 
 lazy val commonSettings = Seq(
   scalaVersion := "2.13.10",
@@ -24,4 +24,4 @@ lazy val root = (project in file ("."))
 githubOwner := "TheDiscProg"
 githubRepository := "shareprice-config"
 
-addCommandAlias("clntst", ";clean;scalafmt;test:scalafmt;test;")
+addCommandAlias("cleanTest", ";clean;scalafmt;test:scalafmt;test;")

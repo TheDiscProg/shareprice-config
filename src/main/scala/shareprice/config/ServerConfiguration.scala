@@ -1,10 +1,10 @@
 package shareprice.config
 
-import dapex.caching.config.HazelcastConfig
-import dapex.kafka.config.KafkaConfig
-import dapex.rabbitmq.config.RabbitMQConfig
 import io.circe.Decoder
 import io.circe.generic.semiauto.deriveDecoder
+import simex.caching.config.HazelcastConfig
+import simex.kafka.config.KafkaConfig
+import simex.rabbitmq.config.RabbitMQConfig
 
 case class ServerConfiguration(
     // All microservices must have a basic HTTP port for health monitoring

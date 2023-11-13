@@ -6,7 +6,7 @@ This is a shared configuration library for the *share price* applications.
 See image below to see the various services.
 
 As can be seen, this system uses:
-1. RabbitMQ to pass DAPEX messages. Most of these messages will be for fetching data from one system to another.
+1. RabbitMQ to pass SIMEX messages. Most of these messages will be for fetching data from one system to another.
 2. Kafka topics. Most of these will be requests that makes changes in the data, such as updates to database
 3. Caching Cluster - using Hazelcast, to access data that is read often and changes very little.
 
@@ -14,7 +14,7 @@ As can be seen, this system uses:
 Authentication in Shareprice system uses JWT tokens with rotating refresh tokens. The Authorisation tokens have a 5 minute
 lifespan whereas the refresh token has 30 minute lifespan.
 
-The service **service.auth** handles customer authentication and supports three DAPEX messages:
+The service **service.auth** handles customer authentication and supports three SIMEX messages:
 1. A request to *user* entity - which should result in authorisation token and refresh token response
 2. A request to *token* entity - which results in a new authorisation token and refresh token (refresh tokens are rotated)
 3. A response from **service.dbread** with the user principal
@@ -33,7 +33,7 @@ The service **service.auth** handles customer authentication and supports three 
 
 ## Dependencies
 In order to define RabbitMQ queues and Kafka topics, along with their configurations, this library pulls in
-`dapex-rabbitmq`, `dapex-kafka` and `dapex-caching` libraries.
+`simex-rabbitmq`, `simex-kafka` and `simex-caching` libraries.
 
 ## Endpoint definitions: `shareprice.config.ServiceDefinition`
 Endpoints are defined in the class `ServiceDefinition` as follows:
@@ -60,4 +60,4 @@ The queue for **service.drop-off** is not defined as no messges are ever sent to
 * **dbwrite** - requests for database updates/inserts/deletes
 
 ## Diagram
-![Shareprice archetecture overview](./images/EDA_DAPEX.png)
+![Shareprice archetecture overview](./images/EDA_SIMEX.png)

@@ -1,7 +1,7 @@
 package shareprice.rabbitmq
 
-import dapex.rabbitmq.RabbitQueue
 import dev.profunktor.fs2rabbit.model.{ExchangeName, ExchangeType, QueueName, RoutingKey}
+import simex.rabbitmq.RabbitQueue
 
 object SharepriceQueue {
 
