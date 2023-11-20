@@ -2,7 +2,7 @@ import sbt._
 
 object Dependencies {
 
-  private lazy val simexVersion = "0.6.0"
+  private lazy val simexVersion = "0.7.0"
 
   lazy val all = Seq(
     "simex" %% "simex-rabbitmq" % simexVersion,
