@@ -1,6 +1,6 @@
 ThisBuild / organization := "Shareprice"
 
-ThisBuild / version := "0.9.0"
+ThisBuild / version := "0.9.1"
 
 lazy val commonSettings = Seq(
   scalaVersion := "2.13.10",

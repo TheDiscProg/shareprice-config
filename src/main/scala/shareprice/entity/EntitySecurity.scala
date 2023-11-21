@@ -55,4 +55,10 @@ object EntitySecurity {
     case None => Default
   }
 
+  def values: Vector[EntitySecurity with Serializable] = Vector(
+    Authentication,
+    RefreshToken,
+    Default
+  )
+
 }
