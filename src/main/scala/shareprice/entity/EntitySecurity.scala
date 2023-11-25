@@ -38,9 +38,17 @@ object EntitySecurity {
   case object Default extends EntitySecurity {
     override val value: String = "default"
 
-    override val security: Security = Security.BASIC
+    override val security: Security = Security.AUTHORIZED
 
     override val ttl: Long = 300L
+  }
+
+  case object Person extends EntitySecurity {
+    override def value: String = "person"
+
+    override def security: Security = Security.ORIGINAL_TOKEN
+
+    override def ttl: Long = 300L
   }
 
   def fromString(s: String): EntitySecurity = fromEntity(Option(s))
@@ -58,7 +66,8 @@ object EntitySecurity {
   def values: Vector[EntitySecurity with Serializable] = Vector(
     Authentication,
     RefreshToken,
-    Default
+    Default,
+    Person
   )
 
 }
