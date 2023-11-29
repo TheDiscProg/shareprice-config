@@ -58,6 +58,7 @@ object EntitySecurity {
       ent.toLowerCase match {
         case Simex.AUTHENTICATION_ENTITY => Authentication
         case Simex.REFRESH_TOKEN_ENTITY => RefreshToken
+        case "person" => Person
         case _ => Default
       }
     case None => Default
