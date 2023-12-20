@@ -2,6 +2,8 @@ package shareprice.config
 
 import io.circe.Decoder
 import io.circe.generic.semiauto.deriveDecoder
+import pureconfig.generic.ProductHint
+import pureconfig.{CamelCase, ConfigFieldMapping}
 import simex.caching.config.HazelcastConfig
 import simex.kafka.config.KafkaConfig
 import simex.rabbitmq.config.RabbitMQConfig
@@ -20,5 +22,6 @@ case class ServerConfiguration(
 )
 
 object ServerConfiguration {
+  implicit val hint = ProductHint[ServerConfiguration](ConfigFieldMapping(CamelCase, CamelCase))
   implicit val serverConfigurationDecoder: Decoder[ServerConfiguration] = deriveDecoder
 }
