@@ -16,7 +16,7 @@ class SimexSecurityTest extends AnyFlatSpec with Matchers with SimexTestFixture 
 
   it should "determine highest level of security when entity is defined" in {
     val level = SimexSecurity.getSecurity(
-      simexMessage.copy(endpoint = endpoint.copy(entity = Some(Simex.AUTHENTICATION_ENTITY)))
+      simexMessage.copy(destination = endpoint.copy(entity = Some(Simex.AUTHENTICATION_ENTITY)))
     )
 
     level shouldBe BASIC
