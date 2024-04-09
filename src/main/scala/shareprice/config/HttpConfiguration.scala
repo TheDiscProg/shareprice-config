@@ -5,7 +5,7 @@ import io.circe.generic.semiauto.deriveDecoder
 import pureconfig.{CamelCase, ConfigFieldMapping}
 import pureconfig.generic.ProductHint
 
-case class HttpConfiguration(port: Int, hostAddress: String)
+case class HttpConfiguration(url: String, port: Int, hostAddress: String)
 
 object HttpConfiguration {
   implicit val hint = ProductHint[HttpConfiguration](ConfigFieldMapping(CamelCase, CamelCase))
